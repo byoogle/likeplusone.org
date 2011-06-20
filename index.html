@@ -5,9 +5,9 @@
   "http://www.w3.org/TR/html4/strict.dtd"
 >
 <!--
-  The markup for disconnect.me's homepage.
+  The markup for likeplusone.org's homepage.
 
-  Copyright 2010, 2011 Disconnect, Inc.
+  Copyright 2011 Ashkan Soltani and Brian Kennish
 
   This program is free software: you can redistribute it and/or modify it under
   the terms of the GNU General Public License as published by the Free Software
@@ -28,144 +28,116 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Disconnect</title>
+    <title>Like+1</title>
     <link rel="stylesheet" href="house.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery.lightbox_me.js"></script>
     <script type="text/javascript" src="curvycorners.js"></script>
-    <script type="text/javascript" src="jquery.validate.js"></script>
-    <script type="text/javascript" src="jquery.form.js"></script>
-    <script type="text/javascript" src="mailchimp.js"></script>
     <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
     <div id="header">
       <div class="content">
         <br>
-        <img src="disconnect.png" alt="Disconnect">
+        <img src="like+1.png" alt="Like+1">
+        <span class="name">
+          <span id="like">Like</span><span id="plusone">+1</span>
+        </span>
         <div class="description">
-          A browser extension that stops major third parties and search
+          A browser extension that reduces your risk of getting carpal
           <br>
-          engines from tracking the webpages you go to and searches you do
+          tunnel syndrome up to 50% by turning Like into Like+1 buttons
         </div>
       </div>
     </div>
     <div class="content">
       <div id="features">
         <span class="feature">
-          <img src="webpage-unlabeled.png" alt="Webpage">
-          <img src="webpage-unlabeled.png" alt="Webpage">
+          <img src="button.png" alt="Like+1 button">
+          <img src="button.png" alt="Like+1 button">
           <br>
-          <span class="description">Disables third-party tracking</span>
+          <span class="description">Enhances Like buttons</span>
         </span>
         <span class="feature">
-          <img src="search-unlabeled.png" alt="Search">
-          <img src="search-unlabeled.png" alt="Search">
+          <img src="remote.png" alt="Remote like+1s">
+          <img src="remote.png" alt="Remote like+1s">
           <br>
-          <span class="description">Truly depersonalizes searches</span>
+          <span class="description">Likes and +1s pages simultaneously</span>
         </span>
         <span class="feature">
-          <img src="toolbar-unlabeled.png" alt="Toolbar button">
-          <img src="toolbar-unlabeled.png" alt="Toolbar button">
+          <img src="local.png" alt="Local like+1s">
+          <img src="local.png" alt="Local like+1s">
           <br>
-          <span class="description">Shows blocked requests</span>
+          <span class="description">
+            Saves like+1s locally for future exporting
+          </span>
         </span>
-        <span class="feature">
-          <img src="popup-unlabeled.png" alt="Popup bubble">
-          <img src="popup-unlabeled.png" alt="Popup bubble">
+      </div>
+      <div id="actions">
+        <span id="installation">
           <br>
-          <span class="description">Allows easy unblocking</span>
+          <br>
+          <a>
+            <br>
+            <span class="description">
+              Install
+              <span class="name">Like+1</span>
+            </span>
+          </a>
+          <br>
+          <span class="note">
+            Like+1 is available for Firefox, Chrome, Safari, and IE9
+          </span>
+        </span>
+        <span id="attribution">
+          <span class="name">Who made Like+1?</span>
+          <br>
+          <br>
+          <span class="author">
+            <a
+              href="http://ashkansoltani.org/"
+            ><img src="ashkan.png" alt="Ashkan Soltani"></a>
+            <br>
+            <a href="http://ashkansoltani.org/">Ashkan Soltani</a>
+          </span>
+          <span class="author">
+            <a
+              href="http://disconnect.me/"
+            ><img src="brian.png" alt="Brian Kennish"></a>
+            <br>
+            <a href="http://disconnect.me/">Brian Kennish</a>
+          </span>
+          <a
+            href="http://www.webmynd.com/"
+          ><img src="webmynd-badge.png" alt="WebMynd"></a>
+          <br>
+          <br>
         </span>
       </div>
       <br>
-      <div id="mc_embed_signup">
-        <form
-          class="validate"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          method="post"
-          action="http://disconnectere.us2.list-manage1.com/subscribe/post?u=76c4adc61fe2dd1bc82fdac69&amp;id=4a55f2dd7e"
-        >
-          <div id="actions">
-            <span id="installation">
-              <br>
-              <br>
-              <a>
-                <br>
-                <span class="description">
-                  Install
-                  <span class="name">Disconnect</span>
-                </span>
-              </a>
-              <br>
-              <span class="note">
-                Disconnect is available for Firefox, Chrome, and Safari
-              </span>
-            </span>
-            <span id="subscription">
-              Learn more about how to control your data by subscribing to the
-              <span class="name">Disconnect Newsletter</span>
-              <br>
-              <span class="mc-field-group">
-                <!--
-                  The controls are flipped because MailChimp sometimes inserts
-                  an error message after the textbox.
-                -->
-                <input
-                  type="submit"
-                  id="mc-embedded-subscribe"
-                  name="subscribe"
-                  value="Subscribe"
-                  tabindex="2"
-                >
-                <input
-                  class="email required"
-                  id="mce-EMAIL"
-                  name="EMAIL"
-                  tabindex="1"
-                >
-              </span>
-              <span id="mce-responses">
-                <span class="response" id="mce-success-response"></span>
-                <span class="response" id="mce-error-response"></span>
-              </span>
-              <br>
-              <span class="note">
-                You can unsubscribe anytime and your email address won’t be sold
-                or shared, ever
-              </span>
-            </span>
-          </div>
-        </form>
-      </div>
       <div id="footer">
-        <p>
-          We don’t collect your personal
-          <br>
-          information unless you tell us to
-        </p>
-        Copyright 2010, 2011 Disconnect, Inc.
+        <p>Like+1 isn’t affiliated with Facebook or Google</p>
+        © 2011 Ashkan Soltani and Brian Kennish
         <br>
-        <a
-          href="https://www.facebook.com/disconnectere"
-        ><img src="facebook.png" alt="Facebook"></a>
-        <a href="https://www.facebook.com/disconnectere">Facebook page</a>
-        <a
-          href="https://twitter.com/disconnectme"
-        ><img src="twitter.png" alt="Twitter"></a>
-        <a href="https://twitter.com/disconnectme">Twitter account</a>
+        <img src="github.png" alt="GitHub">
+        Get the
+        <a href="https://github.com/byoogle/likeplusone">code</a>
+        &nbsp;
+        <img src="webmynd.png" alt="WebMynd">
+        Work for
+        <a href="http://www.webmynd.com/jobs.html">WebMynd</a>
         <br>
+        <img src="disconnect.png" alt="Disconnect">
+        Try Brian’s other extensions,
+        <br>
+        <a href="http://disconnect.me/">Disconnect</a>
+        and
         <a
-          href="http://byoogle.blogspot.com/"
-        ><img src="blogger.png" alt="Blogger"></a>
-        <a href="http://byoogle.blogspot.com/">Brian’s blog</a>
-        <a
-          href="https://github.com/disconnectme"
-        ><img src="github.png" alt="GitHub"></a>
-        <a href="https://github.com/disconnectme">Source code</a>
+          href="https://chrome.google.com/webstore/detail/ejpepffjfmamnambagiibghpglaidiec"
+        >Facebook Disconnect</a>
         <br>
         <img src="mail.png" alt="Mail">
-        <a>info[at]disconnect[dot]me</a>
+        Email info[at]likeplusone[dot]org
       </div>
     </div>
   </body>

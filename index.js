@@ -1,7 +1,7 @@
 /*
-  The script for disconnect.me.
+  The script for likeplusone.org's homepage.
 
-  Copyright 2010, 2011 Disconnect, Inc.
+  Copyright 2011 Ashkan Soltani and Brian Kennish
 
   This program is free software: you can redistribute it and/or modify it under
   the terms of the GNU General Public License as published by the Free Software
@@ -20,11 +20,10 @@
     Brian Kennish <byoogle@gmail.com>
 */
 
-/* Registers lightboxing, installation, and subscription handlers. */
-// MailChimp unaliases "$".
-jQuery(function() {
-  jQuery('.feature img:first-child').each(function() {
-    var thumbnail = jQuery(this);
+/* Registers lightboxing and installation handlers. */
+$(function() {
+  $('.feature img:first-child').each(function() {
+    var thumbnail = $(this);
 
     thumbnail.click(function() {
       var modal = thumbnail.next();
@@ -36,45 +35,25 @@ jQuery(function() {
     });
   });
 
-  var browser = jQuery.browser;
+  var browser = $.browser;
   var mozilla = browser.mozilla;
-  var tokens;
-  var textbox = jQuery('#mce-EMAIL');
-  var button = jQuery('#mc-embedded-subscribe');
+  var webkit = browser.webkit;
+  var tokens = navigator.userAgent;
 
-  if (mozilla || browser.webkit) {
-    tokens = navigator.userAgent;
-
-    setTimeout(function() {
-      var attribute = 'tabindex';
-      jQuery('#installation a').
-        addClass('activated').
-        attr(attribute, 1).
-        attr(
-          'href',
-          mozilla ? 'disconnect.xpi' :
-              tokens.indexOf('Chrome') >= 0 ?
-                  'https://chrome.google.com/extensions/detail/jeoacafpbcihiomhlakheieifhpjdfeo'
-                      : 'disconnect.safariextz'
-        );
-      textbox.attr(attribute, 2);
-      button.attr(attribute, 3);
-    }, 1000);
-
-    if (tokens.indexOf('iPhone') >= 0) textbox.addClass('iphone');
-  } else {
-    jQuery('#installation .note').html(function(index, markup) {
-      return markup + '— subscribe to find out when your browser is supported';
-    });
-
-    if (browser.msie) button.addClass('ie');
-  }
-
-  var className = 'ghosted';
-
-  textbox.focus(function() {
-    if (textbox.hasClass(className)) textbox.removeClass(className).val('');
-  }).blur(function() {
-    if (textbox.val() == '') textbox.addClass(className).val('Email address');
-  }).val('').blur();
+  if (
+    mozilla || webkit ||
+        browser.msie && tokens.split('MSIE ', 2)[1].split('.', 1) >= 9
+  ) setTimeout(function() {
+    $('#installation a').
+      addClass('activated').
+      attr('tabindex', 1).
+      attr(
+        'href',
+        mozilla ? 'like+1.xpi' :
+            webkit ?
+                tokens.indexOf('Chrome') >= 0 ?
+                    'https://chrome.google.com/webstore/detail/lpehokhlnomihmdpgoclgbapaglbclfg'
+                        : 'like+1.safariextz' : 'like+1.exe'
+      );
+  }, 1000);
 });

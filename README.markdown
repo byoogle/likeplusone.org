@@ -1,1 +1,1 @@
-The [disconnect.me microsite](http://disconnect.me/).
+The [likeplusone.org microsite](http://likeplusone.org/).

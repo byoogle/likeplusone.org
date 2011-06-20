@@ -1,7 +1,7 @@
 /*
-  The house style sheet for disconnect.me.
+  The house style sheet for likeplusone.org.
 
-  Copyright 2010, 2011 Disconnect, Inc.
+  Copyright 2011 Ashkan Soltani and Brian Kennish
 
   This program is free software: you can redistribute it and/or modify it under
   the terms of the GNU General Public License as published by the Free Software
@@ -21,17 +21,16 @@
 */
 html { -webkit-text-size-adjust: none }
 
-body, input { font-family: 'Lucida Sans', Tahoma, Verdana, sans-serif }
-
 body {
   margin: 0;
-  color: #333
+  color: #333;
+  font-family: 'Lucida Sans', Tahoma, Verdana, sans-serif
 }
 
-#header, .name, input { font-size: 20px }
+#header, .name { font-size: 20px }
 
 #header {
-  background: #edeff4;
+  background: #f2f2f2;
   height: 200px
 }
 
@@ -41,11 +40,20 @@ body {
   width: 840px
 }
 
-#header .content, #features, #installation, #footer { text-align: center }
+#header .content, #features, #actions, #footer { text-align: center }
 
 .content img { border: none }
 
-#header .description, #footer img { margin-top: 4px }
+#header .name { font-size: 64px }
+
+#like { color: #3b5998 }
+
+#plusone {
+  color: #176aee;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic
+}
 
 #features { margin: -40px 0 0 16px }
 
@@ -55,89 +63,59 @@ body {
 #installation,
 #installation a,
 #installation .description,
-#subscription { display: inline-block }
-
-.feature img:first-child, #mc-embedded-subscribe { cursor: pointer }
+#attribution,
+.author { display: inline-block }
 
 .feature img:first-child {
-  border: 1px solid #e5eaf1;
-  width: 160px;
-  height: 120px
+  border: 1px solid #e2e2e2;
+  width: 212px;
+  height: 146px;
+  cursor: pointer
 }
 
-.feature img, .response { display: none }
+.feature img { display: none }
 
-.feature .description, .note, #footer { font-size: small }
+.feature .description, .note, #attribution, #footer { font-size: small }
 
-.feature .description, .email.iphone { width: 200px }
+.feature .description { width: 266px }
 
 #actions { margin-left: 32px }
 
-#installation, #footer img { vertical-align: top }
-
 #installation { width: 380px }
 
-#installation a, #subscription {
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  width: 366px
-}
-
-#installation a, input { margin: 8px 0 }
-
-#installation a, .ghosted { color: graytext }
+#installation a, #attribution { width: 366px }
 
 #installation a {
+  margin: 8px 0;
   border: 1px solid #c9c7ba;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
   background: #f5f4ea;
   padding: 4px;
   height: 64px;
+  color: graytext;
   text-decoration: none
 }
 
-#installation .activated, #subscription { color: black }
-
 #installation .activated {
   border: 1px solid #fc0;
-  background: #fe8
+  background: #fe8;
+  color: black
 }
 
-#subscription, input { padding: 8px }
+#attribution { margin-left: 20px }
 
-#subscription, .email { border: 1px solid #93b4d9 }
+.author, #attribution img { vertical-align: middle }
 
-#subscription {
-  margin-left: 20px;
-  background: #cadef4
+.author { width: 96px }
+
+:link, a:active, :visited { color: #003ea8 }
+
+.author img, img { border: 1px solid #333 }
+
+#footer { color: #888 }
+
+#footer img {
+  margin-top: 12px;
+  vertical-align: bottom
 }
-
-.email { width: 226px }
-
-#mc-embedded-subscribe {
-  float: right;
-  border: 1px solid #9b001d;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  background: #d42014;
-  color: white
-}
-
-.ie {
-  width: 112px;
-  height: 40px
-}
-
-span.mce_inline_error, .response {
-  margin-bottom: 8px;
-  font-style: italic
-}
-
-span.mce_inline_error, #mce-error-response { color: maroon }
-
-#mce-success-response { color: green }
-
-#footer a { vertical-align: bottom }
-
-#footer :link, #footer a:active, #footer :visited { color: #003ea8 }
-
-img { border: 1px solid #333 }
