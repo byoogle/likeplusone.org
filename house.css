@@ -119,3 +119,18 @@ body {
   margin-top: 12px;
   vertical-align: bottom
 }
+
+#more {
+  position: relative;
+  left: 640px;
+  bottom: 115px;
+  width: 60px;
+  height: 18px
+}
+
+iframe {
+  border: none;
+  width: 100px;
+  height: 70px;
+  overflow: hidden
+}
